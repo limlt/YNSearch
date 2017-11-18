@@ -42,8 +42,10 @@ open class YNSearch: NSObject {
         if let _histories = pref.object(forKey: "histories") as? [String] {
             histories = _histories
         }
-        histories.append(value)
-
+        if let index = histories.index(of: value) {
+            histories.remove(at: index)
+        }
+        histories.insert(value, at: 0)
         pref.set(histories, forKey: "histories")
     }
     
