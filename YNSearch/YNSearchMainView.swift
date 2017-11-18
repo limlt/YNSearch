@@ -98,7 +98,7 @@ open class YNSearchMainView: UIView {
         }
         guard let originY = ynCategoryButtons.last?.frame.origin.y else { return }
         self.searchHistoryLabel = UILabel(frame: CGRect(x: margin, y: originY + 30, width: width - 40, height: 40))
-        self.searchHistoryLabel.text = "Search History"
+        self.searchHistoryLabel.text = "検索履歴"
         self.searchHistoryLabel.font = UIFont.systemFont(ofSize: 13)
         self.searchHistoryLabel.textColor = UIColor.darkGray
         self.addSubview(self.searchHistoryLabel)
@@ -136,7 +136,7 @@ open class YNSearchMainView: UIView {
         guard let lastHistoryView = self.ynSearchHistoryViews.last else { return }
         
         self.clearHistoryButton = UIButton(frame: CGRect(x: margin, y: lastHistoryView.frame.origin.y + lastHistoryView.frame.height, width: width - (margin * 2), height: 40))
-        self.clearHistoryButton.setTitle("Clear search history", for: .normal)
+        self.clearHistoryButton.setTitle("検索履歴クリア", for: .normal)
         self.clearHistoryButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         self.clearHistoryButton.setTitleColor(UIColor.darkGray, for: .normal)
         self.clearHistoryButton.setTitleColor(UIColor.lightGray, for: .highlighted)
